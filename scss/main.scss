@@ -1,0 +1,26 @@
+@import 'nav';
+
+$pixel20:20px;
+// $opacity: 0.5;
+
+@mixin square ($size){
+  width:$size;
+  height:$size;
+}
+
+.box{
+  @include square ($pixel20);
+  background: $pink;
+}
+
+@mixin bkgw ($opacity){
+  background: rgba(255,255,255, $opacity);
+}
+@mixin bkgb ($opacity){
+  background: rgba(0,0,0, $opacity);
+}
+
+.box2{
+  @include bkgb (0.5);
+  @include square (100px);
+}
